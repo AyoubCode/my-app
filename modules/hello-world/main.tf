@@ -20,7 +20,7 @@ resource "aws_instance" "EC2-instance" {
   security_groups      = [aws_security_group.allow_web.name]
   iam_instance_profile = aws_iam_instance_profile.dev-resources-iam-profile.name
 
-  tags {
+  tags = {
     Name = "hello-world"
   }
 }
@@ -41,7 +41,6 @@ resource "aws_key_pair" "generated_key" {
 
 resource "aws_security_group" "allow_web" {
   name        = "webserver"
-  vpc_id      = module.it_internal_vpc.vpc_id
   description = "Allows access to Web Port"
   #allow http 
   ingress {
