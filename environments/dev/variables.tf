@@ -5,6 +5,6 @@ variable "key_name" {
 
 variable "region" {
   description = "aws region"
-  type = string
-  default = "eu-west-3"
+  type        = string
+  default     = "eu-west-3"
 }
