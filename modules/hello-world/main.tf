@@ -14,7 +14,7 @@ provider "aws" {
 
 # EC2 instance 
 resource "aws_instance" "EC2-instance" {
-  ami                  = "ami-0dcc1e21636832c5d"
+  ami                  = "ami-017d9f576d1635a77"
   instance_type        = "m2.micro"
   key_name             = aws_key_pair.generated_key.key_name
   security_groups      = [aws_security_group.allow_web.name]
